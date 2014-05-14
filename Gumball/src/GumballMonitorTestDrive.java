@@ -7,7 +7,7 @@ public class GumballMonitorTestDrive {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String[] location = {"rmi://first", "rmi://second", "rmi://third"};
+		String[] location = {"rmi://127.0.0.1/first"};
 		
 		GumballMonitor[] monitor = new GumballMonitor[location.length];
 

@@ -1,7 +1,7 @@
 import java.rmi.Naming;
 
 
-public class GumballTest {
+public class GumballMachineTestDrive {
 
 	public static void main(String[] args) {
 		
@@ -17,10 +17,11 @@ public class GumballTest {
 		GumballMachine gumballMachine;
 		gumballMachine = new GumballMachine(args[0], count);
 		
+		
 		GumballMonitor monitor = new GumballMonitor( gumballMachine);
 		monitor.report();
-		Naming.rebind("//"+args[0] + "/GumballMachine", gumballMachine);
-		
+		Naming.rebind("//"+args[0]+"/first", gumballMachine);
+		System.out.println("Gets past");
 		}
 		catch(Exception e){
 			e.printStackTrace();
